@@ -38,6 +38,11 @@ class Timetrap::Formatters::Everhour
 
     payloads = parser.payloads
 
+    if payloads.length <= 0
+      puts "Nothing to report."
+      return
+    end
+
     puts "The following entries will be submitted:\n"
 
     payloads.each do |payload|
